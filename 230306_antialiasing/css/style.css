@@ -1,0 +1,22 @@
+@charset "utf-8";
+.container{width:1024px;margin:0 auto}
+.main_tit{margin-top:100px;text-align:center}
+.guineapig{margin-top:60px;padding:20px;background:rgba(0,0,0,0.8);box-sizing:border-box}
+.guineapig .guineapig_tit{color:#fff}
+.guineapig .guineapig_tit + .guineapig_tit{margin-top:10px}
+.guineapig .guineapig_tit1{font-size:60px}
+.guineapig .guineapig_tit2{font-size:48px}
+.guineapig .guineapig_tit3{font-size:36px}
+.guineapig .guineapig_tit4{font-size:24px}
+.guineapig .guineapig_tit5{font-size:18px}
+.guineapig .guineapig_tit6{font-size:16px}
+.guineapig .anti_aliased{transform:rotate(0.04deg);-ms-transform:rotate(0.04deg)}
+.desc{margin-top:40px}
+.desc .desc_tit{font-size:18px}
+.desc .desc_tit + .desc_tit{margin-top:10px}
+.desc .desc_code{display:block;margin-top:20px;padding:20px;background:#dedede;box-sizing:border-box}
+.experiment{margin-top:20px}
+.experiment .experiment_item{display:inline-block}
+.experiment .experiment_item + .experiment_item{margin-left:10px}
+.experiment .experiment_item input[type="radio"]{display:inline-block;vertical-align:middle}
+.experiment .experiment_item label{display:inline-block;vertical-align:middle}

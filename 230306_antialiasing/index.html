@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-aliasing 테스트</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <h1 class="main_tit">안티앨리어싱 테스트</h1>
+        <div class="guineapig">
+            <p class="guineapig_tit guineapig_tit1">안녕하신가 내가 젤 큰형이라네 허허</p>
+            <p class="guineapig_tit guineapig_tit2">엣헴 난 둘째라서 위에 쟤보다 조금 작어</p>
+            <p class="guineapig_tit guineapig_tit3">테스트 중이니까 헛소리한다고 이상하게 보지 말어</p>
+            <p class="guineapig_tit guineapig_tit4">왜냐면 글자 깨져서 못생겨 보이고 싶지 않거든</p>
+            <p class="guineapig_tit guineapig_tit5">화내지마 못생겨보여</p>
+            <p class="guineapig_tit guineapig_tit6">응애 나같이 작아도 안티앨리어싱 되나여</p>
+        </div>
+        <div class="desc">
+            <p class="desc_tit">
+                아래 CSS를 적용하면 못생겨 보이는 글자가 스무스하고 이쁘게 보인다 <br>
+                근데 IE8 이하 버전 브라우저는 transform 지원이 되지 않는다 (유감) <br>
+                <a href="https://caniuse.com/?search=transform" target="_blank">https://caniuse.com/?search=transform</a> <br>
+            </p>
+            <p class="desc_tit">
+                참고 : <a href="http://ft-dev.pages.hivelab.co.kr/ojt_2023_1th/leejinseon/5th/pc/signup1_ver2.html" target="_blank">http://ft-dev.pages.hivelab.co.kr/ojt_2023_1th/leejinseon/5th/pc/signup1_ver2.html</a>
+            </p>
+            <code class="desc_code">
+                transform:rotate(0.04deg) <br>
+                -ms-transform:rotate(0.04deg)
+            </code>
+        </div>
+        <ul class="experiment">
+            <li class="experiment_item">
+                <input type="radio" name="anti" id="anti01" checked>
+                <label for="anti01">DEFAULT</label>
+            </li>
+            <li class="experiment_item">
+                <input type="radio" name="anti" id="anti02">
+                <label for="anti02">ANTI-ALIASING</label>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+    var option = $(".experiment_item input[type='radio'][name='anti']");
+
+    option.on("change",function(){
+        if ($("#anti02").prop("checked")) {
+            $(".guineapig .guineapig_tit").addClass("anti_aliased");
+        } else {
+            $(".guineapig .guineapig_tit").removeClass("anti_aliased");
+        }
+    });
+</script>
+</body>
+</html>
