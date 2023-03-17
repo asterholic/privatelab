@@ -5,5 +5,14 @@
 .btn_popup{width:150px;height:50px;background:#dedede}
 .popup_bg{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:#000;opacity:.3}
 .popup_bg.is_show{display:block}
-.popup{display:none;overflow-y:auto;position:fixed;top:0;right:0;bottom:0;left:0;width:75%;max-width:650px;height:80%;max-height:640px;margin:auto;background:#dedede}
+.popup{display:none;position:fixed;top:0;right:0;bottom:0;left:0;width:650px;height:640px;margin:auto;border-radius:35px;background:#dedede}
+.popup .cont_inner{overflow-y:auto;height:100%}
+.popup .close_btn{position:absolute;width:25px;height:25px}
+.popup .close_btn:before{position:absolute;left:calc(50% - 1px);top:0;width:2px;height:100%;background:#000;transform:rotate(45deg);content:''}
+.popup .close_btn:after{position:absolute;left:calc(50% - 1px);top:0;width:2px;height:100%;background:#000;transform:rotate(-45deg);content:''}
+.popup .img_box{width:50%;margin:0 auto}
 .popup.is_show{display:block}
+.popup1{padding:30px 0;box-sizing:border-box}
+.popup1 .close_btn{right:30px;top:30px}
+.popup2{border-top:30px solid #dedede;border-bottom:30px solid #dedede;box-sizing:border-box}
+.popup2 .close_btn{right:30px;top:0}

@@ -12,32 +12,59 @@
 <div class="wrap">
     <div class="container">
         <h1 class="main_tit">모서리가 둥근 팝업 테스트</h1>
-        <div class="btn_box"><button type="button" class="btn_popup">나와라 팝업</button></div>
+        <div class="btn_box"><button type="button" class="btn_popup" data-popup="popup1">나와라 팝업1</button></div>
+        <div class="btn_box"><button type="button" class="btn_popup" data-popup="popup2">나와라 팝업2</button></div>
     </div>
     <div class="popup_bg"></div>
-    <div class="popup">
+    <div class="popup popup1">
         <a href="javascript:;" class="close_btn"><span class="blind">닫기</span></a>
-        <div class="img_box">
-            <img src="img/img1_1.png" alt="">
-            <img src="img/img1_2.png" alt="">
-            <img src="img/img1_3.png" alt="">
-            <img src="img/img2_1.png" alt="">
-            <img src="img/img2_2.png" alt="">
-            <img src="img/img2_3.png" alt="">
-            <img src="img/img3_1.png" alt="">
-            <img src="img/img3_2.png" alt="">
-            <img src="img/img3_3.png" alt="">
-            <img src="img/img4_1.png" alt="">
-            <img src="img/img4_2.png" alt="">
-            <img src="img/img4_3.png" alt="">
+        <div class="cont_inner">
+            <div class="img_box">
+                <img src="img/img1_1.png" alt="">
+                <img src="img/img1_2.png" alt="">
+                <img src="img/img1_3.png" alt="">
+                <img src="img/img2_1.png" alt="">
+                <img src="img/img2_2.png" alt="">
+                <img src="img/img2_3.png" alt="">
+                <img src="img/img3_1.png" alt="">
+                <img src="img/img3_2.png" alt="">
+                <img src="img/img3_3.png" alt="">
+                <img src="img/img4_1.png" alt="">
+                <img src="img/img4_2.png" alt="">
+                <img src="img/img4_3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="popup popup2">
+        <a href="javascript:;" class="close_btn"><span class="blind">닫기</span></a>
+        <div class="cont_inner">
+            <div class="img_box">
+                <img src="img/img1_1.png" alt="">
+                <img src="img/img1_2.png" alt="">
+                <img src="img/img1_3.png" alt="">
+                <img src="img/img2_1.png" alt="">
+                <img src="img/img2_2.png" alt="">
+                <img src="img/img2_3.png" alt="">
+                <img src="img/img3_1.png" alt="">
+                <img src="img/img3_2.png" alt="">
+                <img src="img/img3_3.png" alt="">
+                <img src="img/img4_1.png" alt="">
+                <img src="img/img4_2.png" alt="">
+                <img src="img/img4_3.png" alt="">
+            </div>
         </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script>
     $('.btn_popup').on('click',function(){
+        var popClass = $(this).data('popup');
         $('.popup_bg').addClass('is_show');
-        $('.popup').addClass('is_show');
+        $('.popup').each(function(){
+            if ($(this).hasClass(popClass)) {
+                $(this).addClass('is_show');
+            }
+        });
     });
     $('.popup_bg, .close_btn').on('click',function(){
         $('.popup').removeClass('is_show');
