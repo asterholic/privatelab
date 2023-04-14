@@ -1,0 +1,8 @@
+@charset "utf-8";
+.wrap{overflow:hidden;max-width:1024px;margin:0 auto}
+.main_tit{margin-top:100px;text-align:center}
+.sub_tit{margin-bottom:20px;font-size:20px}
+ul{margin-top:50px;margin-bottom:100px}
+ul li + li{margin-top:20px}
+ul li .box{width:100vw;height:100vw;background:#000}
+ul li img{width:100%}
