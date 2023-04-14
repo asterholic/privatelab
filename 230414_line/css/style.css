@@ -5,4 +5,5 @@
 ul{margin-top:50px;margin-bottom:100px}
 ul li + li{margin-top:20px}
 ul li .box{width:100vw;height:100vw;background:#000}
+ul li .box2{width:100vw;height:140.6vw;background:#000}
 ul li img{width:100%}
