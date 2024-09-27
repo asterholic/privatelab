@@ -15,23 +15,26 @@
         <div class="img_spin on">
             <img src="./img/manisle.png" alt="">
         </div>
-        <div class="img_spin2">
+        <div class="img_spin">
             <img src="./img/sigongjoa.webp" alt="">
         </div>
     </div>
-    <button class="change">이미지 바꾸기</button>
+    <button class="btn_change">이미지 바꾸기</button>
 </div>
 <script>
-    document.addEventListener('scroll', () => {
-        document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-    }, false);
+document.addEventListener('scroll', () => {
+document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
 
-    const $change = document.querySelector('button.change');
-    const $img = document.querySelector('.img');
+const change = document.querySelector('.btn_change');
+const imgSpins = document.querySelectorAll('.img_spin');
 
-    $change.addEventListener('click', () => {
-        $img.
+change.addEventListener('click', () => {
+    imgSpins.forEach(imgSpin => {
+        if (imgSpin.classList.contains('on')) imgSpin.classList.remove('on'); 
+        else imgSpin.classList.add('on'); 
     });
+});
 </script>
 </body>
 </html>
